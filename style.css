@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+:root{ 
+    --cor-de-fundo: #78aaf0;
+    --verde:#f4f4f5;
+    --branco:#f7f5f5;
+    --botao-ativo:#db3dd8;
+    --botao-inativo: rgba(228, 171, 218, 0.5);
+    --texto-fundo: rgba(207, 8, 243, 0.3);
+}
+
+
+body{
+background-color: rgba(232, 182, 226, 0.866);
+font-family: 'lobster', sans-serif;
+}
+
+h2 {
+color: rgb(56, 3, 51);
+}
+
+.conteudo-principal{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+}
+
+.titulo-principal{
+      text-align: left;
+      width: 100%;
+      font-size: 32px;
+}
+
+.titulo-principal span {
+    color: var(--verde);
+}
+
+.botao{
+    font-family: "lobster",sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+
+}      
+
+.botoes{
+   display: block;
+}
+@media screen and (min-width: 768px){
+    .botoes {
+        display: flex;
+    }
+}
+.botao:first-child {
+              border-radius: 40px 0 0 0;
+    }
+.botao:last-child {
+               border-radius: 0 40px 0 0;
+}
+
+.abas-textos {
+background-color: var(--texto-fundo);
+}
+
+.botao.ativo {
+    background-color: var(--botao-ativo);
+    border-bottom: 10px solid var(--verde);
+}
+
+.aba-conteudo.ativo{
+    display: block;
+}
+
+.aba-conteudo{
+    display: none;
+}
+.contador{
+    font-size: 20px;
+    text-align: center;
+}
