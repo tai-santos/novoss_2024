@@ -19,7 +19,7 @@ const botoes = document.querySelectorAll('.botao');
 
  const contadores = document.querySelectorAll('.contador');
   contadores[0].textContent = "Contagem regressiva";
-  const tempoobjetivo1 = new Date("2024-08-18t00:00:00");
+  const tempoobjetivo1 = new Date("2024-08-14t00:00:00");
   const tempoobjetivo2 = new Date("2024-09-05t00:00:00");
   const tempoobjetivo3 = new Date("2024-10-30t00:00:00");
   const tempoobjetivo4 = new Date("2024-11-01t00:00:00");
@@ -33,16 +33,16 @@ const botoes = document.querySelectorAll('.botao');
    function calculaTempo(tempoobjetivo) {
     let tempoAtual = new Date();
     let tempofinal = tempoobjetivo - tempoAtual;
-    let segundos =  Math.floor(tempofinal/ 1000);
-    let minutos = Math.floor(segundos / 60);
-    let horas = Math.floor(minutos / 60);
-    let dias = Math.floor(horas / 24);
+    let s =  Math.floor(tempofinal/ 1000);
+    let m = Math.floor(s / 60);
+    let h = Math.floor(m/ 60);
+    let d = Math.floor(h/ 24);
 
-    segundos %=60;
-    minutos %=60;
-    horas %=60;
+    s %=60;
+    m %=60;
+    h %=60;
 
-    return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos ";
+    return d + " d " + h + " h " + m + " m " + s + " s ";
    }
 function atualizaCronometro(){
     for (let i=0; i<contadores.length;i++){
